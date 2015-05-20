@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ScribFly Demo</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+
+</head>
+
+<body id="main_body" >
+	
+		<div id="form_container">
+	
+		<h1><a>ScribFly Demo</a></h1>
+		<form id="form_956947" class="appnitro"  method="post" action="">
+			
+		<div class="form_description">
+		<h2>ScribFly - An Online Document Filing Tool (Demo)</h2>
+		</div>	          					
+		
+		<ul >	
+		<li id="listitem_1" >
+		<label class="description" for="case_number">Case Number: </label>
+		<span>
+			<input type="text" name="case_number" id="case_number" class="element text" value="Enter case number" maxlenght="255" size="30" onclick="this.value = ''">
+		</span> 
+		</li>
+		
+		<li id="listitem_2" >
+		<label class="description" for="case_state">State: </label>
+		<div>
+		<select class="element select" id="case_state" name="case_state"> 
+			<option value="" selected="selected"></option>
+			<option value="1" >Georgia</option>
+			<option value="2" >Coming Soon...</option>
+		</select>
+		</div> 
+		</li> 
+		
+		<li id="listitem_3" >
+		<label class="description" for="case_county">County: </label>
+		<div>
+		<select class="element select" id="case_county" name="case_county"> 
+			<option value="" selected="selected"></option>
+			<option value="1" >Dekalb</option>
+			<option value="2" >Fulton</option>
+			<option value="3" >Gwinnett</option>
+			<option value="4" >Paulding</option>
+		</select>
+		</div>
+		</li>
+		
+		<li id="listitem_4">
+		<label class="description" for="case_court">Court: </label>
+		<div>
+		<select class="element select" id="case_court" name="case_court"> 
+			<option value="" selected="selected"></option>
+			<option value="1" >State Court</option>
+			<option value="2" >Superior Court</option>
+		</select>
+		</div>
+		</li>
+		
+		<li id="listitem_5">
+		<label class="description" for="clerk_email">Clerk Email (Required) </label>
+		<div>
+		<input id="clerk_email" name="clerk_email" class="element text" type="text" maxlength="60" value="" required onclick="this.value = ''"/> 
+		</div>
+		</li>
+		
+		<li id="listitem_6">
+		<label class="description" for="plaintiff_email">Plaintiff Email (Required) </label>
+		<div>
+		<textarea id="plaintiff_email" name="plaintiff_email" class="element textarea" type="text" value="" required onclick="this.value = ''"/> 
+		</textarea>
+		<label>Enter email addresses separated by commas</label>
+		</div>
+		</li>
+		
+		<li id="listitem_7">
+		<label class="description" for="defendent_email">Defendent Email (Required) </label>
+		<div>
+		<textarea id="defendent_email" name="defendent_email" class="element textarea" type="text" value="" required onclick="this.value = ''"/> 
+		</textarea>
+		<label>Enter email addresses separated by commas</label>
+		</div>
+		</li>
+		
+		<li class="buttons">
+		<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		<input id="cancelForm" class="button_text" type="reset" name="cancel" value="Cancel" />
+		</li>
+		</ul>
+		</form>	
+	</div>
+	</body>
+</html>
