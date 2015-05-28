@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Attorney POC</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+		<!-- Top menu -->
+		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Attorney POC</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="top-navbar-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<span class="li-text">
+								Welcome
+							</span> 
+							<a href="#"><strong>Hrishi</strong></a> 
+							<span class="li-text">
+								: 
+							</span> 
+							<span class="li-social">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Create a case"><i class="fa fa-briefcase"></i></a> 
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="File a document"><i class="fa fa-folder-open"></i></a> 
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages"><i class="fa fa-envelope"></i></a> 
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Sign Out"><i class="fa fa-sign-out"></i></a>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                    	<div class="col-sm-6 book">
+                    		<img src="assets/img/ebook2.png" alt="">
+                    	</div>
+                        <div class="col-sm-5 form-box">
+                            <!-- *** LOGIN / SIGN UP***-->
+                            <div id="page_login" class="hidden">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Already have an account?</h3>
+                                        <p>Please login:</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form id="form_login"  role="form" action="" method="post" class="registration-form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-email">Email</label>
+                                            <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-password">Password</label>
+                                            <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                        </div>
+                                        <button type="submit" class="btn">Log in</button>
+                                    </form>
+                                </div>
+                                <!--*** ***-->
+                                <h1 style="color: white"><em>OR</em></h1>
+                                <!-- *** ***-->
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Sign Up</h3>
+                                        <p>Fill in the form below to get instant access:</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                        <i class="fa fa-pencil"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form id="form_signup" role="form" action="" method="post" class="registration-form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-first-name">First name</label>
+                                            <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-last-name">Last name</label>
+                                            <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-email">Email</label>
+                                            <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-email">Re-enter Email</label>
+                                            <input type="text" name="form-email" placeholder="Re-enter Email..." class="form-email form-control" id="form-email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-email">New password</label>
+                                            <input type="text" name="form-email" placeholder="New password..." class="form-email form-control" id="form-email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-email">Your secure pass ID</label>
+                                            <input type="text" name="form-email" placeholder="Your secure pass ID..." class="form-email form-control" id="form-email">
+                                        </div>
+                                        <!-- Multiple Radios (inline) -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="radios">Inline Radios</label>
+                                            <div class="">
+                                                <label class="radio-inline" for="radios-0">
+                                                    <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                                    Female
+                                                </label>
+                                                <label class="radio-inline" for="radios-1">
+                                                    <input type="radio" name="radios" id="radios-1" value="2">
+                                                    Male
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn">Sign up</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- *** CHOICE ***-->
+                            <div id="page_choice" class="hidden">
+                                <div class="top-big-link">
+                                    <p>
+                                        <a id="btn_document" class="btn btn-link-2" href="#">File document for an existing case</a>
+                                    </p>
+                                    <p>
+                                        <a id="btn_case" class="btn btn-link-2" href="#">Create a new case</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- *** CASE ***-->
+                            <div id="page_case"class="hidden">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Case</h3>
+                                        <p>Fill in the form below to unput a new case:</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                        <i class="fa fa-briefcase"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form id="form_case" role="form" action="" method="post" class="registration-form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-first-name">Case number</label>
+                                            <input type="text" name="form-first-name" placeholder="Case number..." class="form-first-name form-control" id="form-first-name">
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-cEmail">Clerk Email</label>
+                                            <input type="text" name="form-cEmail" placeholder="Clerk Email..." class="form-cEmail form-control" id="form-cEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-pEmail">Plaintiff Email</label>
+                                            <input type="text" name="form-pEmail" placeholder="Plaintiff Email..." class="form-pEmail form-control" id="form-pEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-dEmail">Defendant Email</label>
+                                            <input type="text" name="form-dEmail" placeholder="Defendant Email..." class="form-dEmail form-control" id="form-dEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <button type="reset" class="btn">Cancel</button>
+                                        <button type="submit" class="btn">Save</button>
+                                    </form>
+                                </div>
+                                </div>
+                                <!-- *** DOCUMENT ***-->
+                            <div id="page_document" class="hidden">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Document</h3>
+                                        <p>Fill in the form below to unput a new Document:</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                        <i class="fa fa-folder-open"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form id="form_document" role="form" action="" method="post" class="registration-form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-first-name">Case number</label>
+                                            <input type="text" name="form-first-name" placeholder="Case number..." class="form-first-name form-control" id="form-first-name">
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Select Basic -->
+                                        <div class="form-group">
+                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <div class="">
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                    <option value="1">Option one</option>
+                                                    <option value="2">Option two</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-cEmail">Clerk Email</label>
+                                            <input type="text" name="form-cEmail" placeholder="Clerk Email..." class="form-cEmail form-control" id="form-cEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-pEmail">Plaintiff Email</label>
+                                            <input type="text" name="form-pEmail" placeholder="Plaintiff Email..." class="form-pEmail form-control" id="form-pEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-dEmail">Defendant Email</label>
+                                            <input type="text" name="form-dEmail" placeholder="Defendant Email..." class="form-dEmail form-control" id="form-dEmail">
+                                            <a href="#" class="fa fa-search-plus"></a>
+                                        </div>
+                                        <button type="reset" class="btn">Cancel</button>
+                                        <button type="submit" class="btn">Save</button>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
