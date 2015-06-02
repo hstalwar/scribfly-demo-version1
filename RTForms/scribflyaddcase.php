@@ -19,7 +19,7 @@
 	$mycasenumber = "49A7896VB2";
 	$mystate = "Georgia";
 	$mycounty = "Fulton";
-	$mycourt = "State Court";
+	$mycourt = "State";
 	$myclerkemail = "clerk@state.fulton.gov";
 	$myplaintiffemail = "khilbert@hilbertlaw.com, jhilbert@hilbertlaw.com, ehilber@hilbertlaw.com";
 	$mydefendentemail = "htalwar@scribfly.com, khilbert@scribfly.com";
@@ -34,27 +34,29 @@
 	$db_connect = mysql_connect($server, $user_name, $password);
 	if ($db_connect) 
 	{
-		//print("Server connected !! <BR>");
+		print("Server connected !! <BR>");
+
 		$db_handle = mysql_select_db($database, $db_connect);
 		if ($db_handle)
 		{
-				// Look up the other values from the Pricing Model table based on the adjusted score.
-				$myinsert_query = "INSERT INTO $table_name (casenumber, state, county, court, clerkemail, plaintiffemail, defendentemail) 
-				VALUES ($mycasenumber, $mystate, $mycounty, $mycourt, $myclerkemail, $myplaintiffemail, $mydefendentemail)";
+			print("Table selected !! <BR>");
 
-				$query_inputresult = mysql_query($myuserinput_query);
-				
-				if ($query_inputresult)
-				{
-					print("Case successfully added !!");
+			// Look up the other values from the Pricing Model table based on the adjusted score.
+			$myinsert_query = "INSERT INTO $table_name (casenumber, state, county, court, clerkemail, plaintiffemail, defendentemail)".
+			" VALUES ('$mycasenumber', '$mystate', '$mycounty', '$mycourt', '$myclerkemail', '$myplaintiffemail', '$mydefendentemail')";
 
-				}
+			$retval = mysql_query($myinsert_query, $db_connect);
+			if (! $retval)
+			{
+				die('Could not enter data: ' . mysql_error());
+			}
+			echo "Entered data successfully\n";
+			mysql_close($db_connect);
 		}
-		else
-		{
-			print("Database not found");
-		}
-		mysql_close($db_connect);
+	}
+	else
+	{
+		print("Server not found !!");
 	}
 ?>
 </body>
