@@ -35,11 +35,21 @@ jQuery(document).ready(function() {
  
     	if (!error) {
     	    var id = $(this).attr('id');
-    	    if (id == 'form_login' || id == 'form_signup' || id == 'form_case' || id == 'form_document') {
-    	        $('#page_login, #page_case, #page_document').toggleClass('hidden', true);
-    	        $('#page_choice').removeClass('hidden').addClass('show');
-    	    }
+
             e.preventDefault();
+			$.ajax({
+				url: '',
+				type: 'POST',
+				success: function(data, textStatus, xhr) {
+					//show success alert
+					moveNext(id);
+					$('.alert-success span').text('You have been registered successfully.');					
+					$('.alert-success').removeClass('hidden');
+				},
+				error: function(xhr, textStatus, errorThrown) {
+					alert('bad');
+				}	
+			});
         }
     });
 
@@ -60,4 +70,11 @@ jQuery(document).ready(function() {
 
     // Login page
     $('#page_login').removeClass('hidden').addClass('show');
+	
+	function moveNext(id){
+		if (id == 'form_login' || id == 'form_signup' || id == 'form_case' || id == 'form_document') {
+			$('#page_login, #page_case, #page_document').toggleClass('hidden', true);
+			$('#page_choice').removeClass('hidden').addClass('show');
+		}
+	}
 });

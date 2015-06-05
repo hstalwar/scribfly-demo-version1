@@ -55,6 +55,7 @@
 								: 
 							</span> 
 							<span class="li-social">
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fa fa-home"></i></a> 
                                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Create a case"><i class="fa fa-briefcase"></i></a> 
                                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="File a document"><i class="fa fa-folder-open"></i></a> 
                                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages"><i class="fa fa-envelope"></i></a> 
@@ -65,7 +66,12 @@
 				</div>
 			</div>
 		</nav>
-
+	<div class="bs-example">
+    <div class="alert alert-success hidden">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success! </strong><span></span>
+    </div>
+</div>
         <!-- Top content -->
         <div class="top-content">
         	
@@ -88,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="form-bottom">
-                                    <form id="form_login"  role="form" action="" method="post" class="registration-form">
+                                    <form id="form_login"  role="form" action="scribflylogin.php" method="post" class="registration-form">
                                         <div class="form-group">
                                             <label class="sr-only" for="form-email">Email</label>
                                             <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
@@ -113,7 +119,7 @@
                                     </div>
                                 </div>
                                 <div class="form-bottom">
-                                    <form id="form_signup" role="form" action="" method="post" class="registration-form">
+                                    <form id="form_signup" role="form" action="scribflyadduser.php" method="post" class="registration-form">
                                         <div class="form-group">
                                             <label class="sr-only" for="form-first-name">First name</label>
                                             <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
@@ -179,38 +185,39 @@
                                     </div>
                                 </div>
                                 <div class="form-bottom">
-                                    <form id="form_case" role="form" action="" method="post" class="registration-form">
+                                    <form id="form_case" role="form" action="scribflyaddcase.php" method="post" class="registration-form">
                                         <div class="form-group">
                                             <label class="sr-only" for="form-first-name">Case number</label>
                                             <input type="text" name="form-first-name" placeholder="Case number..." class="form-first-name form-control" id="form-first-name">
                                         </div>
                                         <!-- Select Basic -->
                                         <div class="form-group">
-                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <label class="sr-only" for="state">State</label>
                                             <div class="">
-                                                <select id="selectbasic" name="selectbasic" class="form-control">
-                                                    <option value="1">Option one</option>
-                                                    <option value="2">Option two</option>
+                                                <select id="state" name="state" class="form-control">
+                                                    <option value="1">Georgia</option>                                                    
                                                 </select>
                                             </div>
                                         </div>
                                         <!-- Select Basic -->
                                         <div class="form-group">
-                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <label class="sr-only" for="county">County</label>
                                             <div class="">
-                                                <select id="selectbasic" name="selectbasic" class="form-control">
-                                                    <option value="1">Option one</option>
-                                                    <option value="2">Option two</option>
+                                                <select id="county" name="county" class="form-control">
+													<option value="1" >Dekalb</option>
+													<option value="2" >Fulton</option>
+													<option value="3" >Gwinnett</option>
+													<option value="4" >Paulding</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <!-- Select Basic -->
                                         <div class="form-group">
-                                            <label class="sr-only" for="selectbasic">Select Basic</label>
+                                            <label class="sr-only" for="selectbasic">Court System</label>
                                             <div class="">
-                                                <select id="selectbasic" name="selectbasic" class="form-control">
-                                                    <option value="1">Option one</option>
-                                                    <option value="2">Option two</option>
+                                                <select id="court_system" name="court_system" class="form-control">
+													<option value="1" >State Court</option>
+													<option value="2" >Superior Court</option>
                                                 </select>
                                             </div>
                                         </div>
