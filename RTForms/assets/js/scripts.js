@@ -34,23 +34,9 @@ jQuery(document).ready(function() {
     	});
  
     	if (!error) {
-    	    var id = $(this).attr('id');
-
-            e.preventDefault();
-			$.ajax({
-				url: '',
-				type: 'POST',
-				success: function(data, textStatus, xhr) {
-					//show success alert
-					moveNext(id);
-					$('.alert-success span').text('You have been registered successfully.');					
-					$('.alert-success').removeClass('hidden');
-				},
-				error: function(xhr, textStatus, errorThrown) {
-					alert('bad');
-				}	
-			});
-        }
+			e.preventDefault();			
+			doPost($(this));
+		}
     });
 
     $('#btn_document').on('click', function(e) {
@@ -71,10 +57,32 @@ jQuery(document).ready(function() {
     // Login page
     $('#page_login').removeClass('hidden').addClass('show');
 	
+	// Utility Functions
 	function moveNext(id){
 		if (id == 'form_login' || id == 'form_signup' || id == 'form_case' || id == 'form_document') {
 			$('#page_login, #page_case, #page_document').toggleClass('hidden', true);
 			$('#page_choice').removeClass('hidden').addClass('show');
 		}
 	}
+	
+	function doPost(form){
+		url = form.attr( "action" );
+		data = form.serialize();
+		console.log(url + '*' + data);
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: data,
+			success: function(data, textStatus, xhr) {
+				console.log('responseDATA' + data);
+				//show success alert
+				moveNext(form.attr('id'));
+				$('.alert-success span').text('You have been registered successfully.');					
+				$('.alert-success').removeClass('hidden');
+			},
+			error: function(xhr, textStatus, errorThrown) {
+				alert('bad');
+			}	
+		});			
+	}	
 });
